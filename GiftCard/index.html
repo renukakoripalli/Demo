@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+   
+        <script src="./scripts/cartScript.js">
+        function validateForm() {
+            if (id == "t1") {
+                var x = document.forms["myForm"]["t1"].value;
+                if (x == "") {
+                    alert("only enter the numbers");
+                    return false;
+                }
+            }
+            else if (id == "t2") {
+                var y = document.forms["myForm"]["t2"].value;
+                if (y > 10 || y < 0) { alert("only enter number in the range of 0 and 10 only") }
+            }
+            if (document.myForm.INR.value == "") {
+                alert("Please provide your name!");
+                document.myForm.Name.focus();
+                return false;
+            }
+        }
+
+    </script>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        fieldset {
+            width: 400px;
+            float: center;
+        }
+
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <h2 style="color:blue"> place gift card order page:</h2>
+        <form name="myForm" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <th>GiftCardAmount:</th>
+                    <td><input type="text" size="2" id="t1" autofocus>: <input type="text" size="2" id="t2" maxlength="2"></td>
+
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>
+                        INR &nbsp;&nbsp;
+                        PAISA
+                    </th>
+                </tr>
+                <tr>
+
+                    <th>  Receipent Home:</th>
+                    <td><input type="text" size="10" id="t3"></td>&nbsp; &nbsp; &nbsp;
+                    <td><input type="text" size="10" id="t4"></td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <th>FirstName </th>
+                    <th>LastName</th>
+                </tr>
+            </table><br /><br />
+            <fieldset class="border 6  border-dark">
+                <legend class="w-auto"><b>Shipping Address:</b></legend>
+                <table>
+                    <tr>
+                        <td><input type="text" id="t5" size="30"></td>
+                    </tr>
+                    <tr>
+                        <th text-align="center"> Steet Address</th>
+                    <tr>
+                        <td><input type="text" size="10" id="t6"></td>&nbsp&nbsp
+                        <td><input type="text" size="10" id="t7"></td>
+                    </tr>
+                    <tr>
+                        <th> City</th>
+                        <th>State</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select id="t8">
+                                <option value=" "> </option>
+                                <option value="INDIA">India</option>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="china">China</option>
+                            </select>&nbsp&nbsp
+                        </td>
+                        <td><input type="text" size="10" maxlength="6"></td>
+
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <th>Pincode</th>
+                    </tr>
+                </table>
+            </fieldset>
+            <table float="left">
+                <tr>
+                    <th>Buyers Name:</th>
+                    <td> <input type="text" size="20" id="t9"></td> &nbsp; &nbsp;
+                    <td><input type="text" size="20" id="t10"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+            </table>
+            <table float="left">
+                <tr>
+                    <th> Phone Number:</th>
+                    <td>
+                        <input type="text" size="2" value="+91" readonly="readonly" id="t11" />&nbsp-<input type="text" size="1" maxlength="1" id="t12" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                        <input type="text" size="1" maxlength="1" />&nbsp
+                    </td>
+                </tr>
+                <br />
+            </table></br>
+            <table float="left">
+                <tr>
+                    <th>Email :</th>
+                    <td><input type="email" size="25" /></td>
+                </tr>
+            </table>
+        </form></br>
+        <div class="text-left">
+            <td><button style="button" class="btn btn-success" onclick="alert('Your  order placed suceessfully')">Place Order</button></td></tr>
+        </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
